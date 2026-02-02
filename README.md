@@ -1,8 +1,8 @@
 # Identificação
 
-* Nome: 
-* Email (@ccc): 
-* Matrícula: 
+* Nome: Maria Luísa Pereira Gomes
+* Email (@ccc): maria.luisa.pereira.gomes@ccc.ufcg.edu.br
+* Matrícula: 124211070
 
 # Roteiro: Heap
 
