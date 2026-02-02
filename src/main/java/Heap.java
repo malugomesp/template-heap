@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Heap {
     
     private int[] heap;
-    private int tail;
+    private int tail; //Controla o indice do ultimo elem do array.
     
     public Heap(int capacidade) {
         this.heap = new int[capacidade];
