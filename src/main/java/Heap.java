@@ -21,26 +21,42 @@ public class Heap {
     }
 
     public int left(int i) {
-    	// TODO
-        return -1;
+        int left = (i * 2) + 1;
+        if (left > this.tail) return -1;
+        return left;
     }
 
     public int right(int i) {
-        // TODO
-        return -1;
+        int right = (i * 2) + 2;
+        if (right > this.tail) return -1;
+        return right;
     }
 
     public int parent(int i) {
-        // TODO
-        return -1;
+        return Math.floorDiv(i-1, 2);
     }
 
     public void add(int n) {
-    	// TODO
+    	if (this.tail >= heap.length - 1) {
+            resize();
+        }
+
+        this.tail += 1;
+        this.heap[this.tail] = n;
+        
+        int i = this.tail;
+        while(i > 0 && this.heap[parent(i)] < this.heap[i]) {
+            int aux = this.heap[i];
+            this.heap[i] = this.heap[parent(i)];
+            this.heap[parent(i)] = aux;
+            i = parent(i);
+        }
     }
 
     private void buildHeap() {
-        // TODO 
+        for (int i = parent(this.tail); i >= 0; i--){
+            heapify(i);
+        }
     }
     
     public int remove() {
